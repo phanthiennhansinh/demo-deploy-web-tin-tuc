@@ -6,7 +6,7 @@
 	<artifactId>spring-mvc</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>technewfinal</name>
+
 
 	<properties>
 		<servlet.api.version>3.1.0</servlet.api.version>
@@ -202,41 +202,28 @@
 				</configuration>
 			</plugin>
 			
-			<plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>2.6</version>
+
+
+               <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals><goal>copy</goal></goals>
                     <configuration>
-                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                        <warName>technewfinal</warName>
-                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.github.jsimone</groupId>
+                                <artifactId>webapp-runner</artifactId>
+                                <version>9.0.27.0</version>
+                                <destFileName>webapp-runner.jar</destFileName>
+                            </artifactItem>
+                        </artifactItems>
                     </configuration>
-                </plugin>
-
-
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.3</version>
-                    <executions>
-                        <execution>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>copy</goal>
-                            </goals>
-                            <configuration>
-                                <artifactItems>
-                                    <artifactItem>
-                                        <groupId>com.github.jsimone</groupId>
-                                        <artifactId>webapp-runner</artifactId>
-                                        <version>8.0.24.0</version>
-                                        <destFileName>webapp-runner.jar</destFileName>
-                                    </artifactItem>
-                                </artifactItems>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
+                </execution>
+            </executions>
+        </plugin>
 		</plugins>
 	</build>
 	
