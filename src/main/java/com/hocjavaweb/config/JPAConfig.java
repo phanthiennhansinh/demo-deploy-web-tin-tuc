@@ -53,6 +53,7 @@ public class JPAConfig {
 		//dataSource.setUsername("root");
 		//dataSource.setPassword("123456");
 	//	dataSource.setPassword("SMHmva18377");
+		//=============
 		dataSource.setUrl("jdbc:mysql://sql12.freemysqlhosting.net/sql12315688");
 		dataSource.setUsername("sql12315688");
 		dataSource.setPassword("hq5VZfE3Ww");
