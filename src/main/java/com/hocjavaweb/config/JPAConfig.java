@@ -49,10 +49,14 @@ public class JPAConfig {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 	//	dataSource.setUrl("jdbc:mysql://localhost:3306/springmvcbasicdemo");
-    	dataSource.setUrl("jdbc:mysql://node219324-baothanhnien.j.layershift.co.uk/springmvcbasicdemo?useUnicode=true&characterEncoding=UTF-8");
-		dataSource.setUsername("root");
+    //	dataSource.setUrl("jdbc:mysql://node219324-baothanhnien.j.layershift.co.uk/springmvcbasicdemo?useUnicode=true&characterEncoding=UTF-8");
+	//	dataSource.setUsername("root");
 	//	dataSource.setPassword("123456");
-		dataSource.setPassword("SMHmva18377");
+	//	dataSource.setPassword("SMHmva18377");
+		//================================
+		dataSource.setUrl("jdbc:mysql://sql12.freemysqlhosting.net/sql12315688");
+		dataSource.setUsername("sql12315688");
+		dataSource.setPassword("hq5VZfE3Ww");
 		return dataSource;
 	}
 	Properties additionalProperties() {
